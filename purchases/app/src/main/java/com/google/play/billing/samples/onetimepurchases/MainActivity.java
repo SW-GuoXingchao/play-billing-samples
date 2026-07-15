@@ -44,7 +44,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity implements BillingServiceClientListener {
 
   private BillingServiceClient billingServiceClient;
-  private static final String ONE_TIME_PRODUCT_01 = "one_time_product_01";
+  private static final String ONE_TIME_PRODUCT_01 = "c01";
   private static final String CONSUMABLE_PRODUCT_01 = "consumable_product_01";
   private static final String CONSUMABLE_PRODUCT_02 = "consumable_product_02";
   private static final String CONSUMABLE_PRODUCT_03 = "consumable_product_03";
