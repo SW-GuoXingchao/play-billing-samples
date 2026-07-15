@@ -26,14 +26,15 @@ jobs:
             ~/.gradle/wrapper
           key: gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
 
-      # 修复点：去掉 working-directory，先cd进入目录再执行打包
+      # 改为进入 purchases 目录打包
       - name: Build Release APK
         run: |
-          cd ClassyTaxiJava
+          cd purchases
           ./gradlew assembleRelease
 
+      # 上传对应路径的APK
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: release-apk
-          path: ClassyTaxiJava/app/build/outputs/apk/release/app-release-unsigned.apk
+          path: purchases/app/build/outputs/apk/release/app-release-unsigned.apk
